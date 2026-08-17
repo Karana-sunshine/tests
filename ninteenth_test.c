@@ -1,17 +1,17 @@
 #include<stdio.h>
 int main()
-{//冒泡排序
-    int arr[]={34,25,64,78,12};
+{//选择排序
+    int arr[]={81,62,98,21,1,35,66};
     int len=sizeof(arr)/sizeof(arr[0]);
     for(int i=0;i<len-1;i++)
-    {  
-        for(int j=0;j<len-1-i;j++)
+    {
+        for(int j=i+1;j<len;j++)
         {
-            if(arr[j]>arr[j+1])
+            if(arr[i]>arr[j])
             {
-                int temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
             }
         }
     }
